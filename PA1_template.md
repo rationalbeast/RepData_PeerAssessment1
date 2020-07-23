@@ -239,7 +239,7 @@ weekday_group <- aggregate(x = original_data$steps,
 ```r
 g <- ggplot(data = weekday_group, aes(x = Group.2, y = x))
 g + geom_line() + 
-        facet_grid(.~Group.1) + 
+        facet_grid(Group.1~.) + 
         labs(title = "Activity Patterns between Weekdays & Weekends") +
         xlab("5 Min Intervals") + 
         ylab("Average Number of Steps Taken") +
